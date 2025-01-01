@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Mohd Amjad Ali</title>
+    <link rel="stylesheet" href="/css/projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        body {
+            background-color: #0f0f0f;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        .navbar {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+            background-color: #121212;
+            position: fixed;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00f6ff;
+        }
+        ul {
+            list-style-type: none;
+            display: flex;
+            gap: 30px;
+        }
+        ul li {
+            display: inline;
+        }
+        ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        ul li a:hover,
+        ul li a.active {
+            color: #00f6ff;
+        }
+
+        /* Projects Section */
+        .projects-section {
+            width: 100%;
+            padding: 100px 50px 50px 50px;
+            text-align: center;
+        }
+        .projects-section h1 {
+            font-size: 3rem;
+            color: #00f6ff;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            animation: glow 1.5s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #00f6ff, 0 0 20px #00f6ff, 0 0 30px #00f6ff, 0 0 40px #00f6ff;
+            }
+            to {
+                text-shadow: 0 0 20px #00f6ff, 0 0 30px #00f6ff, 0 0 40px #00f6ff, 0 0 50px #00f6ff;
+            }
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .project-card {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 30px rgba(0, 255, 255, 0.6);
+        }
+        .project-card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #00f6ff;
+        }
+        .project-card p {
+            color: #cfcfcf;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #00f6ff;
+            color: #000;
+            border-radius: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #00bfbf;
+        }
+        
+        /* Animations */
+        .project-card::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background-color: rgba(0, 255, 255, 0.2);
+            transform: rotate(45deg);
+            z-index: 0;
+            transition: transform 0.5s ease;
+        }
+        .project-card:hover::before {
+            transform: rotate(0deg);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .projects-section {
+                padding: 100px 20px;
+            }
+            ul {
+                gap: 15px;
+            }
+            ul li a {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="logo">Mohd Amjad Ali</div>
+    <ul>
+        <li><a href="/pages/index.html">Home</a></li>
+        <li><a href="/pages/about.html">About Me</a></li>
+        <li><a href="/pages/skills.html">Skills</a></li>
+        <li><a href="/pages/projects.html" class="active">Projects</a></li>
+        <li><a href="/pages/events.html">Events</a></li>
+        <li><a href="/pages/achievements.html">Achievements</a></li>
+        <li><a href="/pages/certificates.html">Certificates</a></li>
+        <li><a href="/pages/contact.html">Contact</a></li>
+    </ul>
+</div>
+
+<section class="projects-section">
+    <h1>My Projects</h1>
+    <div class="projects-grid">
+        <div class="project-card">
+            <h2>All-in-One AI Application</h2>
+            <p>An advanced AI application with chatbot, text-to-speech, speech-to-text, code generator, math solver, quizzes, and more to solve daily tasks efficiently.</p>
+            <a href="https://github.com/your-link" target="_blank" class="btn">View Project</a>
+        </div>
+        <div class="project-card">
+            <h2>Zeroclass Gaming</h2>
+            <p>Gaming platform offering Sudoku, Tic Tac Toe, Wordsearch, Chess, and other games. Built using HTML, CSS, and JavaScript for a fun experience.</p>
+            <a href="https://github.com/your-link" target="_blank" class="btn">View Project</a>
+        </div>
+        <div class="project-card">
+            <h2>Leaf & Spike Wheat Disease Detection</h2>
+            <p>AI-powered deep convolutional architecture achieving 97.88% accuracy in detecting wheat diseases, with a clean user interface for real-time use.</p>
+            <a href="https://github.com/your-link" target="_blank" class="btn">View Project</a>
+        </div>
+        <div class="project-card">
+            <h2>BillyBox - Billing Application</h2>
+            <p>A billing web application allowing users to manage purchases, expenses, inventory, invoicing, and employee attendance in one place for efficiency.</p>
+            <a href="https://github.com/your-link" target="_blank" class="btn">View Project</a>
+        </div>
+        <div class="project-card">
+            <h2>Portfolio Website</h2>
+            <p>Built with HTML, CSS, and JavaScript, this portfolio showcases who I am, my projects, and skills. Explore to learn more about my work and journey.</p>
+            <a href="https://github.com/your-link" target="_blank" class="btn">View Project</a>
+        </div>
+    </div>
+</section>
+    
+</body>
+</html>
