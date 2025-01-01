@@ -1,0 +1,223 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1d1f20, #252627);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+}
+
+/* Navbar (Header) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #00c9ff;
+}
+
+.navbar .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #00c9ff;
+    text-transform: uppercase;
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    background-color: #00c9ff;
+    color: #000;
+}
+
+/* About Section */
+.about-section {
+    margin-top: 100px;
+    text-align: center;
+    max-width: 1200px;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+}
+
+.about-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #00c9ff;
+}
+
+.profile-img {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.profile-img img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease;
+}
+
+/* Simplified Hover Effect */
+.profile-img img:hover {
+    transform: scale(1.1); /* Slightly scale up the image */
+}
+
+.about-section p {
+    max-width: 900px; /* Ensure paragraphs are aligned with each other */
+    line-height: 1.6; /* Improved line height for readability */
+    color: #b0b3b5;
+    font-size: 1.1rem;
+    margin: 20px auto; /* Center align the paragraphs */
+    text-align: justify; /* Justify text for a cleaner look */
+}
+
+/* Interests Section */
+.interests-section {
+    margin: 40px 0;
+    padding: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.interests-section h2 {
+    font-size: 2rem;
+    color: #00c9ff;
+    margin-bottom: 20px;
+}
+
+.interests-section p {
+    max-width: 900px; /* Ensure paragraphs are aligned with each other */
+    margin: 20px auto; /* Center align the paragraphs */
+    font-size: 1.2rem;
+    color: #fff;
+    line-height: 1.6; /* Improved line height for readability */
+    text-align: justify; /* Justify text for a cleaner look */
+}
+
+/* Education Section */
+.education-section {
+    padding: 50px 20px;
+    background: #111111;
+    color: #ffffff;
+    background-image: linear-gradient(135deg, #111, #191919);
+    text-align: center;
+}
+
+.education-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.education-section p {
+    max-width: 900px; /* Ensure paragraphs are aligned with each other */
+    margin: 20px auto; /* Center align the paragraphs */
+    line-height: 1.6; /* Improved line height for readability */
+    text-align: justify; /* Justify text for a cleaner look */
+}
+
+/* Timeline */
+.timeline {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.timeline li {
+    margin-bottom: 20px;
+}
+
+.timeline h3 {
+    font-size: 24px;
+    color: #00c9ff;
+}
+
+.timeline p {
+    max-width: 900px; /* Ensure paragraphs are aligned with each other */
+    margin: 10px auto; /* Center align the paragraphs */
+    color: #bbbbbb;
+    line-height: 1.6; /* Improved line height for readability */
+    text-align: justify; /* Justify text for a cleaner look */
+}
+
+/* Footer */
+footer {
+    padding: 20px 50px;
+    text-align: center;
+    background-color: #101010;
+    color: #ffffff;
+    font-size: 14px;
+    background-image: linear-gradient(135deg, #101010, #181818);
+    border-top: 2px solid #00c9ff;
+}
+
+footer p {
+    margin-bottom: 10px;
+    color: #bbb;
+}
+
+footer a {
+    color: #00c9ff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+    .about-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-section p,
+    .interests-section p,
+    .education-section p,
+    .timeline p {
+        padding: 10px;
+        font-size: 1rem;
+        text-align: justify; /* Maintain justified alignment */
+    }
+
+    .profile-img img {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-section h1 {
+        font-size: 2rem;
+    }
+
+    .about-section h2 {
+        font-size: 1.6rem;
+    }
+}
